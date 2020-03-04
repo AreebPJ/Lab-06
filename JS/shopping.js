@@ -72,3 +72,11 @@ newItem.addEventListener("keyup", ev =>{
     addBtn.click();
   }
   });
+  addBtn.addEventListener("click", ev =>{
+    newItem.value.split(",").forEach(v => {
+      if (v) {
+        addItem(v);
+      }
+    });
+    newItem.value = null;
+  });
